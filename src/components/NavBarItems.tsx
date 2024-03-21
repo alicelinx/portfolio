@@ -3,31 +3,30 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
+import MobileSideBar from './MobileSideBar';
 
 interface NavBarItemsProps {
   pages: string[];
-  anchorEl: HTMLElement | null;
-  handleOpenNavMenu: (event: React.MouseEvent<HTMLElement>) => void;
-  handleCloseNavMenu: () => void;
   toggleDarkMode: () => void;
-  darkMode: Boolean;
+  darkMode: boolean;
 };
 
 const NavBarItems: React.FC<NavBarItemsProps> = ({
   pages,
-  anchorEl,
-  handleOpenNavMenu,
-  handleCloseNavMenu,
   toggleDarkMode,
   darkMode,
 }) => {
+  const [drawerOpen, setDrawerOpen] = React.useState(false);
+  
+  const toggleDrawer = (newOpen: boolean) => {
+    setDrawerOpen(newOpen)
+  };
+
   return (
     <Container maxWidth="xl">
       <Toolbar disableGutters>
@@ -47,53 +46,22 @@ const NavBarItems: React.FC<NavBarItemsProps> = ({
         >
           A. Lin
         </Typography>
+
         <Box sx={{ display: { xs: 'flex', md: 'none' }, flexGrow: 1, justifyContent: 'end' }}>
           <IconButton
             size="large"
-            aria-label="menu"
-            aria-controls="menu-appbar"
-            aria-haspopup="true"
-            onClick={handleOpenNavMenu}
+            onClick={() => toggleDrawer(true)}
           >
             <MenuIcon sx={{ color: darkMode ? '#fff' : '#151515' }} />
           </IconButton>
-          <Menu
-            id="menu-appbar"
-            anchorEl={anchorEl}
-            anchorOrigin={{
-              vertical: "bottom",
-              horizontal: "left",
-            }}
-            keepMounted
-            transformOrigin={{
-              vertical: "top",
-              horizontal: "left",
-            }}
-            open={Boolean(anchorEl)}
-            onClose={handleCloseNavMenu}
-            sx={{
-              display: { xs: "block", md: "none" },
-            }}
-            PaperProps={{
-              sx: {
-                backgroundColor: darkMode ? '#353b3c' : '#c3b5b5',
-                color: darkMode ? '#fff' : '#151515'
-              }
-            }}
-          >
-            {pages.map((page) => (
-              <MenuItem key={page} onClick={handleCloseNavMenu}>
-                <Typography>{page}</Typography>
-              </MenuItem>
-            ))}
-          </Menu>
+          <MobileSideBar pages={pages} toggleDrawer={toggleDrawer} drawerOpen={drawerOpen} darkMode={darkMode} />
         </Box>
 
         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'end', gap: 5 }}>
           {pages.map((page) => (
             <Button
               key={page}
-              onClick={handleCloseNavMenu}
+              onClick={() => console.log(`clicked ${page}`)}
               sx={{ 
                 textTransform: 'none',
                 my: 2,

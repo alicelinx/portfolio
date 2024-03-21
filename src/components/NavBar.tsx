@@ -6,20 +6,10 @@ const pages: string[] = ['About', 'Projects', 'Contact'];
 
 interface NavBarProps {
   toggleDarkMode: () => void;
-  darkMode: Boolean;
+  darkMode: boolean;
 };
 
-const NavBar: React.FC<NavBarProps> = ({ toggleDarkMode, darkMode }) => {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-  
-  const handleCloseNavMenu = () => {
-    setAnchorEl(null);
-  };
-  
+const NavBar: React.FC<NavBarProps> = ({ toggleDarkMode, darkMode }) => {  
   return (
     <AppBar 
       position="absolute"
@@ -37,9 +27,6 @@ const NavBar: React.FC<NavBarProps> = ({ toggleDarkMode, darkMode }) => {
     >
       <NavBarItems 
         pages={pages}
-        anchorEl={anchorEl}
-        handleOpenNavMenu={handleOpenNavMenu}
-        handleCloseNavMenu={handleCloseNavMenu}
         toggleDarkMode={toggleDarkMode}
         darkMode={darkMode}
       />
