@@ -1,12 +1,18 @@
-import './App.css'
-import NavBar from './componenets/NavBar'
+import React, { useState } from 'react';
+import './App.css';
+import NavBar from './components/NavBar';
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+  
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
 
   return (
-    <>
-      <NavBar />
-    </>
+    <div className={darkMode ? 'dark-mode' : 'light-mode'}>
+      <NavBar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+    </div>
   )
 }
 

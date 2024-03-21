@@ -9,12 +9,15 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
 
 interface NavBarItemsProps {
   pages: string[];
   anchorEl: HTMLElement | null;
   handleOpenNavMenu: (event: React.MouseEvent<HTMLElement>) => void;
   handleCloseNavMenu: () => void;
+  toggleDarkMode: () => void;
+  darkMode: Boolean;
 };
 
 const NavBarItems: React.FC<NavBarItemsProps> = ({
@@ -22,6 +25,8 @@ const NavBarItems: React.FC<NavBarItemsProps> = ({
   anchorEl,
   handleOpenNavMenu,
   handleCloseNavMenu,
+  toggleDarkMode,
+  darkMode,
 }) => {
   return (
     <Container maxWidth="xl">
@@ -36,7 +41,7 @@ const NavBarItems: React.FC<NavBarItemsProps> = ({
             fontFamily: 'Gill Sans',
             fontWeight: 700,
             letterSpacing: '.2rem',
-            color: '#151515',
+            color: darkMode ? '#fff' : '#151515',
             textDecoration: 'none',
           }}
         >
@@ -50,7 +55,7 @@ const NavBarItems: React.FC<NavBarItemsProps> = ({
             aria-haspopup="true"
             onClick={handleOpenNavMenu}
           >
-            <MenuIcon />
+            <MenuIcon sx={{ color: darkMode ? '#fff' : '#151515' }} />
           </IconButton>
           <Menu
             id="menu-appbar"
@@ -71,7 +76,8 @@ const NavBarItems: React.FC<NavBarItemsProps> = ({
             }}
             PaperProps={{
               sx: {
-                backgroundColor: '#c3b5b5',
+                backgroundColor: darkMode ? '#353b3c' : '#c3b5b5',
+                color: darkMode ? '#fff' : '#151515'
               }
             }}
           >
@@ -91,7 +97,7 @@ const NavBarItems: React.FC<NavBarItemsProps> = ({
               sx={{ 
                 textTransform: 'none',
                 my: 2,
-                color: '#151515',
+                color: darkMode ? '#fff' : '#151515',
                 display: 'block',
                 background: 'none',
                 border: 'none',
@@ -112,8 +118,8 @@ const NavBarItems: React.FC<NavBarItemsProps> = ({
             </Button>
           ))}
         </Box>
-        <DarkModeIcon sx={{ paddingLeft: '40px', color: '#151515', fontSize: 'large' }} />
-
+        {!darkMode && <DarkModeIcon sx={{ paddingLeft: '40px', color: '#151515', fontSize: 'large' }} onClick={toggleDarkMode} />}
+        {darkMode && <LightModeIcon sx={{ paddingLeft: '40px', color: '#fff', fontSize: 'large' }} onClick={toggleDarkMode} />}
       </Toolbar>
     </Container>
   );

@@ -4,7 +4,12 @@ import NavBarItems from './NavBarItems';
 
 const pages: string[] = ['About', 'Projects', 'Contact'];
 
-const NavBar: React.FC = () => {
+interface NavBarProps {
+  toggleDarkMode: () => void;
+  darkMode: Boolean;
+};
+
+const NavBar: React.FC<NavBarProps> = ({ toggleDarkMode, darkMode }) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -26,7 +31,8 @@ const NavBar: React.FC = () => {
         padding: {
           xs: '1.5em',
           md: '3em 12em',
-        }
+        },
+        color: darkMode ? '#fff' : '#151515',
       }}
     >
       <NavBarItems 
@@ -34,6 +40,8 @@ const NavBar: React.FC = () => {
         anchorEl={anchorEl}
         handleOpenNavMenu={handleOpenNavMenu}
         handleCloseNavMenu={handleCloseNavMenu}
+        toggleDarkMode={toggleDarkMode}
+        darkMode={darkMode}
       />
     </AppBar>
   );
