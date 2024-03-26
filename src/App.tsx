@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
+import Intro from './components/Intro';
+import ProjectCarousel from './components/ProjectCarousel';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -20,6 +22,8 @@ function App() {
   return (
     <div className={darkMode ? 'dark-mode' : 'light-mode'}>
       <NavBar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+      <Intro />
+      <ProjectCarousel />
     </div>
   )
 }
