@@ -35,7 +35,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, mdScreen, index }) =
         maxWidth: '456px'
       }}
       >
-        <CardMedia sx={{ flex: 1, height: mdScreen ? '60%' : '50%', backgroundPosition: 'top' }} image={project.imgUrl} />
+        <CardMedia sx={{ height: mdScreen ? '60%' : '50%', backgroundPosition: 'top' }} image={project.imgUrl} />
         <CardContent sx={{ textAlign: 'left' }}>
           <Typography gutterBottom variant="subtitle1" component="div">
             {project.name}
