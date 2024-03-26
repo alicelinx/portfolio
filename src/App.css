@@ -1,3 +1,10 @@
 #root {
   text-align: center;
 }
+
+body {
+  background-color: #c3b5b5;
+}
+body.dark-mode {
+  background-color: #353B3C;
+}

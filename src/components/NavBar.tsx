@@ -16,12 +16,14 @@ const NavBar: React.FC<NavBarProps> = ({ toggleDarkMode, darkMode }) => {
       sx={{
         top: 0,
         width: '100%',
-        backgroundColor: 'inherit',
+        bgcolor: 'inherit',
         boxShadow: 'none',
         padding: {
-          xs: '1.5em',
-          md: '3em 12em',
+          xs: '.5em',
+          sm: '1em 1em',
+          md: '3em 7em'
         },
+        margin: 'auto',
         color: darkMode ? '#fff' : '#151515',
       }}
     >

@@ -1,6 +1,11 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: #c3b5b5;
 }
 
 .light-mode {
