@@ -6,11 +6,11 @@ import '../index.css';
 
 const Intro: React.FC = () => {
   return (
-    <Container maxWidth='lg' sx={{ padding: '5em 1em' }}>
+    <Container maxWidth='lg'>
       <Box sx={{ 
           marginTop: { xs: '100px', md: '160px'},
           marginX: { xs: 'none', md: '4em' },
-          padding: { xs: '0 3em', md: '1em 3em' }, 
+          padding: { xs: '0 3em', md: '6em 3em' }, 
           bgcolor: 'inherit',
           borderRadius: '10px',
           display: 'flex',
