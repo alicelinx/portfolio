@@ -11,13 +11,12 @@ interface StackItem {
 
 const TechSkills = () => {
   return (
-    <Container sx={{ marginBottom: { xs: '56px' } }}>
-      <Typography variant="h4" sx={{ fontFamily: 'Gill Sans' }}>Tech I Use</Typography>
-      <Divider sx={{ width: '150px', height: '3px', bgcolor: '#fa7702', margin: 'auto', marginBottom: '20px' }} />
+    <Container>
+      <Typography className="skills" variant="h5" sx={{ fontFamily: 'Gill Sans' }}>Tech Skills</Typography>
+      <Divider sx={{ width: '100px', height: '3px', bgcolor: '#fa7702', margin: 'auto', marginBottom: '20px' }} />
       <Box 
         sx={{ 
           marginX: { xs: 'none', md: '4em' },
-          padding: '0em 3em', 
           bgcolor: 'inherit',
           borderRadius: '10px',
           display: 'flex',
@@ -29,7 +28,7 @@ const TechSkills = () => {
         <Box
           sx={{
             textAlign: 'center',
-            width: { xs: '100%', sm: '100%', md: '70%' },
+            width: { xs: '100%', sm: '100%', md: '100%' },
             display: 'flex',
             flexDirection: { xs: 'column', sm: 'column', md: 'row' },
             justifyContent: 'space-between',

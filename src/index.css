@@ -102,8 +102,9 @@ html {
 }
 
 .contact,
+.skills,
 .projects {
-  animation: fadeIn 2s;
+  animation: fadeIn 3s;
 }
 
 @-webkit-keyframes slide-up {

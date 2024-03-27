@@ -1,6 +1,6 @@
 import { Box, Container, Divider, Link, Typography } from "@mui/material";
 import '../index.css';
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLink } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
@@ -28,41 +28,42 @@ const Contact = () => {
             alignItems: 'center',
           }}
         >
+          <Typography className="contact" variant="body1" marginY={2}>
+            I'm actively seeking new opportunities and project ideas, please feel free to reach out!
+          </Typography>
           <Box 
-            className="contact"
+            className="contact-2"
             sx={{
-              textAlign: 'center',
+              display: 'flex',
               width: { xs: '100%', sm: '100%', md: '77%' },
               marginTop: '1em',
+              marginBottom: '3em',
+              gap: 3,
+              justifyContent: 'center'
             }}
           >
             <Link href="mailto:alicxxlin@gmail.com, alicexxlin@gmail.com">
               <MdEmail />
             </Link>
-          </Box>
-          <Typography
-            variant='h6'
-            sx={{
-              marginTop: '3em'
-            }}
-          >
-            Or
-          </Typography>
-          <Box 
-            className="contact-2"
-            sx={{
-              width: { xs: '100%', sm: '100%', md: '77%' },
-              marginY: '2em',
-              display: 'flex',
-              justifyContent: 'center',
-              gap: 3
-            }}
-          >
             <Link href="https://github.com/alicelinx">
               <FaGithub />
             </Link>
             <Link href="https://www.linkedin.com/in/alicejll/">
               <FaLinkedin />
+            </Link>
+          </Box>
+          <Typography className="contact" variant="h5" sx={{ fontFamily: 'Gill Sans' }}>Resume</Typography>
+          <Divider sx={{ width: '80px', height: '3px', bgcolor: '#fa7702', margin: 'auto', marginBottom: '30px' }} />
+          <Box 
+            className="contact-2"
+            sx={{
+              width: { xs: '100%', sm: '100%', md: '77%' },
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+          >
+            <Link href="https://flowcv.com/resume/233h8p8v6m">
+              <FaLink />
             </Link>
           </Box>
         </Box>
