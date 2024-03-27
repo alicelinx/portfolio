@@ -2,14 +2,16 @@ import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import NavBarItems from './NavBarItems';
 
-const pages: string[] = ['About', 'Projects', 'Contact'];
+const sections: string[] = ['About', 'Projects', 'Contact'];
 
 interface NavBarProps {
   toggleDarkMode: () => void;
   darkMode: boolean;
+  handleSectionClick: (section: string) => void;
+  mdScreen: boolean;
 };
 
-const NavBar: React.FC<NavBarProps> = ({ toggleDarkMode, darkMode }) => {  
+const NavBar: React.FC<NavBarProps> = ({ toggleDarkMode, darkMode, handleSectionClick, mdScreen }) => {  
   return (
     <AppBar 
       position="absolute"
@@ -28,9 +30,11 @@ const NavBar: React.FC<NavBarProps> = ({ toggleDarkMode, darkMode }) => {
       }}
     >
       <NavBarItems 
-        pages={pages}
+        sections={sections}
         toggleDarkMode={toggleDarkMode}
         darkMode={darkMode}
+        handleSectionClick={handleSectionClick}
+        mdScreen={mdScreen}
       />
     </AppBar>
   );

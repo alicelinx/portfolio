@@ -4,11 +4,11 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Container } from '@mui/material';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import Link from '@mui/material/Link';
-import LinkIcon from '@mui/icons-material/Link';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
+import { FaLink } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
 
 interface Project {
   name: string;
@@ -16,64 +16,69 @@ interface Project {
   techStacks: string[];
   githubUrl: string;
   liveUrl?: string;
-}
+};
 
 interface ProjectCardProps {
   project: Project;
   mdScreen: boolean;
-  index: number;
-}
+};
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project, mdScreen, index }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, mdScreen }) => {
   return (
-    <Container key={index} sx={{ display: 'flex', justifyContent: 'center' }}>
-      <Card sx={{
-        width: '100%',
-        height: '385px',
-        borderRadius: '10px',
-        minWidth: '240px',
-        maxWidth: '456px'
+    <Container
+      key={project.name}
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        marginBottom: '20px',
+        paddingLeft: 'auto',
       }}
+    >
+      <Card 
+        sx={{
+          width: '100%',
+          height: mdScreen ? '385px' : '370px',
+          borderRadius: '10px',
+          minWidth: '240px',
+          maxWidth: '456px',
+          boxShadow: '0rem 0.43rem 0.43rem -0.33rem #736f72',
+          bgcolor: 'inherit',
+          border: '0.5px solid #fff',
+          color: 'inherit',
+        }}
       >
-        <CardMedia sx={{ height: mdScreen ? '60%' : '50%', backgroundPosition: 'top' }} image={project.imgUrl} />
+        <CardMedia
+          component="img" 
+          sx={{
+            height: '60%',
+            backgroundPosition: 'top center',
+            objectFit: 'contain',
+          }} 
+          src={project.imgUrl}
+        />
         <CardContent sx={{ textAlign: 'left' }}>
-          <Typography gutterBottom variant="subtitle1" component="div">
+          <Typography variant="h6" component="div" marginTop={mdScreen ? 1 : -2} marginBottom={1} textAlign='center'>
             {project.name}
           </Typography>
-          <Stack direction="row" flexWrap='wrap' gap={0.5}>
+          <Stack direction="row" flexWrap='wrap' gap={0.5} justifyContent="center">
             {project.techStacks.map((stack, index) => (
-              <Chip key={index} label={stack} variant="outlined" size="small" />
+              <Chip key={index} label={stack} variant="outlined" size="small" sx={{ color: 'inherit' }} />
             ))}
           </Stack>
         </CardContent>
-        <CardActions sx={{ marginLeft: '10px'}}>
+        <CardActions sx={{ display: 'flex', justifyContent: 'center' }}>
           <Link href={project.githubUrl}>
-            <GitHubIcon sx={{
-              color: 'gray',
-              transition: 'all .2s ease-in-out',
-              ':hover': {
-                transform: 'scale(1.2)',
-              }
-            }}
-            />
+            <FaGithub size='22px' />
           </Link>
           {project.liveUrl && (
             <Link href={project.liveUrl}>
-              <LinkIcon sx={{
-                color: 'gray',
-                transition: 'all .2s ease-in-out',
-                ':hover': {
-                transform: 'scale(1.2)',
-              }
-              }}
-              />
+              <FaLink size='22px' />
             </Link>
           )}
         </CardActions>
       </Card>
     </Container>
-    
-  )
-}
+  );
+};
 
 export default ProjectCard;
