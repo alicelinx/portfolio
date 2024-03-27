@@ -12,7 +12,10 @@ function App() {
   const theme = useTheme();
   const mdScreen = useMediaQuery(theme.breakpoints.up('md'));
 
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    const preference = localStorage.getItem('darkMode');
+    return preference ? preference === 'true' : false;
+  });
   const [activeSection, setActiveSection] = useState('intro');
 
   useEffect(() => {
@@ -21,10 +24,11 @@ function App() {
     } else {
       document.body.classList.remove('dark-mode');
     }
+    localStorage.setItem('darkMode', JSON.stringify(darkMode));
   }, [darkMode]);
   
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+    setDarkMode(prevDarkMode => !prevDarkMode);
   };
 
   const handleSectionClick = (section: string) => {
