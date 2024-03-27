@@ -16,7 +16,7 @@ const MobileBottomNavBar: React.FC<MobileBottomNavBarProps> = ({
   handleSectionClick,
   darkMode,
 }) => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(-1);
 
   const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
