@@ -10,7 +10,7 @@ const About = () => {
         sx={{
           padding: { xs: '0', md: '2em 1em' },
           marginTop: { xs: '100px', md: '120px'},
-          marginBottom: { xs: '60px' }
+          marginBottom: { xs: '56px' }
         }}
       >
         <Typography variant="h4" sx={{ fontFamily: 'Gill Sans' }}>About</Typography>
