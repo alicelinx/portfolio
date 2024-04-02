@@ -30,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, mdScreen }) => {
       sx={{
         display: 'flex',
         justifyContent: 'center',
-        marginBottom: '20px',
+        marginBottom: mdScreen ? '40px' : '20px',
         paddingLeft: 'auto',
       }}
     >
@@ -43,7 +43,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, mdScreen }) => {
           maxWidth: '456px',
           boxShadow: '0rem 0.43rem 0.43rem -0.33rem #736f72',
           bgcolor: 'inherit',
-          border: '0.5px solid #fff',
+          border: '1px solid #fff',
           color: 'inherit',
         }}
       >
