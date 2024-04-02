@@ -40,7 +40,7 @@ const NavBarItems: React.FC<NavBarItemsProps> = ({
             textDecoration: 'none',
           }}
         >
-          A. Lin
+          Alice L.
         </Typography>
         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end', gap: 5 }}>
           {sections.map((section) => (
