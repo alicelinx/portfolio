@@ -30,7 +30,7 @@ const Intro: React.FC = () => {
             gutterBottom
             variant="h5"
           >
-            Hey, I'm Alice.
+            Hey, I'm Alice.👩‍💻
           </Typography>
           <Box
             className='brief-intro'
@@ -39,9 +39,12 @@ const Intro: React.FC = () => {
               I'm a full stack web developer with a passion for front end development.
             </Typography>
             <Typography variant="h6">
-              I enjoy building modern web applications that are not only good-looking, 
-              but also provide pleasant user experience.
+              I enjoy building modern web applications that are not only visually appealing 
+              but also provide a pleasant user experience.✨
             </Typography>
+            {/* <Box component='br'></Box>
+            <Box component='br'></Box>
+            <Typography component='a' className='see-projects'>See my work</Typography> */}
           </Box>
         </Box>
       </Box>

@@ -3,6 +3,7 @@ import { Divider, Typography, Box, Container,  } from "@mui/material";
 import { frontEndStacks, backEndStacks, otherStacks } from "../data/stacks";
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
+import '../index.css'
 
 interface StackItem {
   name: string;

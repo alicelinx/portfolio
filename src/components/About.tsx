@@ -1,4 +1,4 @@
-import { Divider, Typography, Box, Container,  } from "@mui/material";
+import { Divider, Typography, Box, Container } from "@mui/material";
 import TechSkills from "./TechSkills";
 
 const About = () => {
@@ -32,9 +32,20 @@ const About = () => {
               width: { xs: '100%', sm: '100%', md: '77%' }
             }}
           >
+            <Box
+              sx={{ 
+                width: '30%',
+                height: 'auto',
+                borderRadius: '100%',
+                border: '1px solid #fff',
+                marginBottom: '15px'
+              }}
+              component="img"
+              src="https://avatars.githubusercontent.com/u/109875850?v=4"
+            />
             <Typography className="about" gutterBottom variant="body1" marginBottom={3}>
-              In late 2019, I moved to Calgary, Canada to study supply chain management. 
-              At first, I found it satisfying getting a job in the field right before graduation, 
+              In late 2019, I moved to Canada from Taiwan to study supply chain management. 
+              At first, I found it satisfying to get a job in the field right before graduation, 
               but soon I realized that was not the career path for me.
               That is when I started coding, and I still remember how excited 
               I felt when completing my first Twitter clone on CodePen.
@@ -45,10 +56,12 @@ const About = () => {
             <Divider sx={{ width: '100px', height: '3px', bgcolor: '#fa7702', margin: 'auto', marginBottom: '20px' }} />
             <Typography className="about" gutterBottom variant="body1" marginBottom={3}>
               With my background in procurement and business administration, 
-              I have honed my soft skills including problem solving, efficient time management, 
+              I have honed my soft skills in areas such as problem solving, efficient time management, 
               and effective teamwork and communication.
             </Typography>
             <TechSkills />
+            <Typography className="skills" variant="h5" sx={{ fontFamily: 'Gill Sans' }}>Interests</Typography>
+            <Divider sx={{ width: '90px', height: '3px', bgcolor: '#fa7702', margin: 'auto', marginBottom: '20px' }} />
             <Typography className="about" gutterBottom variant="body1">
               Outside of coding, you will often find me either traveling, 
               lifting weights at the gym, exploring good foods in the city, or playing video games at home.

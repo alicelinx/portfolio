@@ -1,3 +1,4 @@
+import '../index.css';
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { SiJavascript } from "react-icons/si";
@@ -13,72 +14,87 @@ import { SiTypescript } from "react-icons/si";
 import { FaNpm } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { SiPostman } from "react-icons/si";
+import { FaFigma } from "react-icons/fa";
+import { SiCanva } from "react-icons/si";
+import { IoLogoVercel } from "react-icons/io5";
 
 export const frontEndStacks = [
   {
-    name: 'html',
-    component: <FaHtml5 />,
-  },
-  {
-    name: 'css',
-    component: <FaCss3Alt />,
+    name: 'react',
+    component: <FaReact className="stack-icon" />,
   },
   {
     name: 'javascript',
-    component: <SiJavascript />,
+    component: <SiJavascript className="stack-icon" />,
+  },
+  {
+    name: 'html',
+    component: <FaHtml5 className="stack-icon" />,
+  },
+  {
+    name: 'css',
+    component: <FaCss3Alt className="stack-icon" />,
   },
   {
     name: 'sass',
-    component: <FaSass />,
-  },
-  {
-    name: 'react',
-    component: <FaReact />,
+    component: <FaSass className="stack-icon" />,
   },
   {
     name: 'mui',
-    component: <SiMui />,
+    component: <SiMui className="stack-icon" />,
   },
   {
     name: 'chakra ui',
-    component: <SiChakraui />,
+    component: <SiChakraui className="stack-icon" />,
   },
   {
     name: 'bootstrap',
-    component: <FaBootstrap />,
+    component: <FaBootstrap className="stack-icon" />,
   },
 ];
 
 export const backEndStacks = [
   {
+    name: 'typescript',
+    component: <SiTypescript className="stack-icon" />,
+  },
+  {
     name: 'nodejs',
-    component: <FaNode />,
+    component: <FaNode className="stack-icon" />,
   },
   {
     name: 'express',
-    component: <SiExpress />,
+    component: <SiExpress className="stack-icon" />,
   },
   {
     name: 'postgresql',
-    component: <BiLogoPostgresql />,
-  },
-  {
-    name: 'typescript',
-    component: <SiTypescript />,
+    component: <BiLogoPostgresql className="stack-icon" />,
   },
 ];
 
 export const otherStacks = [
   {
     name: 'npm',
-    component: <FaNpm />,
+    component: <FaNpm className="stack-icon" />,
   },
   {
     name: 'github',
-    component: <FaGithub />,
+    component: <FaGithub className="stack-icon" />,
   },
   {
     name: 'postman',
-    component: <SiPostman />,
+    component: <SiPostman className="stack-icon" />,
   },
+  {
+    name: 'figma',
+    component: <FaFigma className="stack-icon" />
+  },
+  {
+    name: 'canva',
+    component: <SiCanva className="stack-icon" />
+  },
+  {
+    name: 'vercel',
+    component: <IoLogoVercel className="stack-icon" />
+  }
 ];

@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import MobileBottomNavBar from './MobileBottomNavBar';
+import '../index.css'
 
 interface NavBarItemsProps {
   sections: string[];
@@ -44,26 +45,11 @@ const NavBarItems: React.FC<NavBarItemsProps> = ({
         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end', gap: 5 }}>
           {sections.map((section) => (
             <Button
+              className='nav-item'
               key={section}
               onClick={() => handleSectionClick(section.toLowerCase())}
               sx={{ 
-                textTransform: 'none',
-                my: 2,
                 color: darkMode ? '#fff' : '#151515',
-                display: 'block',
-                background: 'none',
-                border: 'none',
-                padding: '1px 10px',
-                fontWeight: 500,
-                fontSize: '16px',
-                transform: 'translateY(0)',
-                transition: 'all 0.2s linear',
-                ':hover': {
-                  background: '#fa7702',
-                  color: 'white',
-                  boxShadow: '0rem 0.43rem 0.43rem -0.33rem #736f72',
-                  transform: 'translateY(-0.1rem)',
-                }
               }}
             >
               {section}
