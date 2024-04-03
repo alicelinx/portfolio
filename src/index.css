@@ -169,8 +169,7 @@ html {
   transform: translateY(0);
   transition: all 0.2s linear;
 }
-.nav-item:hover,
-.nav-item:focus {
+.nav-item:hover {
   background-color: #fa7702 !important;
   color: white;
   box-shadow: 0rem 0.43rem 0.43rem -0.33rem #736f72;
