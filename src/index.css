@@ -90,7 +90,8 @@ html {
   margin-top: 3em;
 }
 
-.about {
+.about,
+.projects {
   opacity: 0;
   -webkit-animation: slide-up 1.5s cubic-bezier(0.4, 0, 0.2, 1) 200ms forwards;
 }
@@ -102,8 +103,7 @@ html {
 }
 
 .contact,
-.skills,
-.projects {
+.skills {
   animation: fadeIn 3s;
 }
 

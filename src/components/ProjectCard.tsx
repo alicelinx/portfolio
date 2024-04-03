@@ -9,6 +9,7 @@ import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import { FaLink } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
+import '../index.css';
 
 interface Project {
   name: string;
@@ -34,30 +35,31 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, mdScreen }) => {
         paddingLeft: 'auto',
       }}
     >
-      <Card 
+      <Card
+        className='projects'
         sx={{
           width: '100%',
-          height: mdScreen ? '385px' : '370px',
+          height: 'auto',
           borderRadius: '10px',
           minWidth: '240px',
           maxWidth: '456px',
-          boxShadow: '0rem 0.43rem 0.43rem -0.33rem #736f72',
+          boxShadow: 'rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px',
           bgcolor: 'inherit',
-          border: '1px solid #fff',
+          border: 'none',
           color: 'inherit',
         }}
       >
         <CardMedia
           component="img" 
           sx={{
-            height: '60%',
-            backgroundPosition: 'top center',
+            width: 'fill',
             objectFit: 'contain',
+            borderRadius: '10px 10px 0 0'
           }} 
           src={project.imgUrl}
         />
         <CardContent sx={{ textAlign: 'left' }}>
-          <Typography variant="h6" component="div" marginTop={mdScreen ? 1 : -2} marginBottom={1} textAlign='center'>
+          <Typography variant="h6" component="div" marginTop={1} marginBottom={1} textAlign='center'>
             {project.name}
           </Typography>
           <Stack direction="row" flexWrap='wrap' gap={0.5} justifyContent="center">
@@ -66,7 +68,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, mdScreen }) => {
             ))}
           </Stack>
         </CardContent>
-        <CardActions sx={{ display: 'flex', justifyContent: 'center' }}>
+        <CardActions sx={{ display: 'flex', justifyContent: 'center', marginBottom: '10px' }}>
           <Link href={project.githubUrl}>
             <FaGithub size='22px' />
           </Link>
