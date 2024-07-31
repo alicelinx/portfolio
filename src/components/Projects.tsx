@@ -20,7 +20,7 @@ const Projects: React.FC<ProjectsProps> = ({ mdScreen }) => {
             }}
           >
             <Typography variant="h4" sx={{ fontFamily: 'Gill Sans' }}>Projects</Typography>
-            <Divider sx={{ width: '120px', height: '3px', bgcolor: '#fa7702', margin: 'auto', marginBottom: '20px' }} />
+            <Divider sx={{ width: '120px', height: '3px', bgcolor: '#fa7702', margin: 'auto', marginBottom: { xs: '20px', md: '' }}} />
             {projects.map((project) => (
               <ProjectCard key={project.name} project={project} mdScreen={mdScreen} />
             ))}
