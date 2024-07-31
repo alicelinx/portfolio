@@ -17,6 +17,10 @@ import { SiPostman } from "react-icons/si";
 import { FaFigma } from "react-icons/fa";
 import { SiCanva } from "react-icons/si";
 import { IoLogoVercel } from "react-icons/io5";
+import { SiTailwindcss } from "react-icons/si";
+import { SiJira } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
+import { FaGitAlt } from "react-icons/fa";
 
 export const frontEndStacks = [
   {
@@ -51,6 +55,10 @@ export const frontEndStacks = [
     name: 'bootstrap',
     component: <FaBootstrap className="stack-icon" />,
   },
+  {
+    name: 'tailwind css',
+    component: <SiTailwindcss className="stack-icon" />,
+  }
 ];
 
 export const backEndStacks = [
@@ -59,7 +67,7 @@ export const backEndStacks = [
     component: <SiTypescript className="stack-icon" />,
   },
   {
-    name: 'nodejs',
+    name: 'node.js',
     component: <FaNode className="stack-icon" />,
   },
   {
@@ -70,12 +78,20 @@ export const backEndStacks = [
     name: 'postgresql',
     component: <BiLogoPostgresql className="stack-icon" />,
   },
+  {
+    name: 'next.js',
+    component: <SiNextdotjs className="stack-icon" />,
+  },
 ];
 
 export const otherStacks = [
   {
     name: 'npm',
     component: <FaNpm className="stack-icon" />,
+  },
+  {
+    name: 'git',
+    component: <FaGitAlt className="stack-icon" />
   },
   {
     name: 'github',
@@ -96,5 +112,9 @@ export const otherStacks = [
   {
     name: 'vercel',
     component: <IoLogoVercel className="stack-icon" />
-  }
+  },
+  {
+    name: 'jira',
+    component: <SiJira className="stack-icon" />
+  },
 ];

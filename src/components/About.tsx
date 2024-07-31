@@ -44,27 +44,30 @@ const About = () => {
               src="https://avatars.githubusercontent.com/u/109875850?v=4"
             />
             <Typography className="about" gutterBottom variant="body1" marginBottom={3}>
-              In late 2019, I moved to Canada from Taiwan to study supply chain management. 
-              At first, I found it satisfying to get a job in the field right before graduation, 
-              but soon I realized that was not the career path for me.
-              That is when I started coding, and I still remember how excited 
-              I felt when completing my first Twitter clone on CodePen.
-              What attracts me most about coding is its power - 
-              with just a few lines of code, I can create beautiful applications and solve problems. 
+              In late 2019, I moved to Canada from Taiwan. 
+              During my time here, I was introduced to the world of coding by my partner, 
+              who is a software developer. His encouragement led me to explore coding, 
+              and I quickly found a passion for it!
+              I still remember the excitement of completing my first Twitter clone on CodePen. 
+              What attracts me most about coding is its power - with just a few lines of code, 
+              I can create beautiful applications and solve problems. <br /><br />
+              I have one year hands-on experience in creating responsive web applications using React, 
+              JavaScript, HTML, and CSS. I'm currently looking for my first role as a front end developer.
             </Typography>
             <Typography className="skills" variant="h5" sx={{ fontFamily: 'Gill Sans' }}>Soft Skills</Typography>
             <Divider sx={{ width: '100px', height: '3px', bgcolor: '#fa7702', margin: 'auto', marginBottom: '20px' }} />
             <Typography className="about" gutterBottom variant="body1" marginBottom={3}>
-              With my background in procurement and business administration, 
-              I have honed my soft skills in areas such as problem solving, efficient time management, 
-              and effective teamwork and communication.
+              With my background in supply chain procurement and business operations, 
+              I have honed my soft skills in areas such as problem-solving, efficient time management, 
+              and effective teamwork and communication. I'm committed to delivering high-quality, 
+              user-friendly interfaces that meet clients' needs.
             </Typography>
             <TechSkills />
             <Typography className="skills" variant="h5" sx={{ fontFamily: 'Gill Sans' }}>Interests</Typography>
             <Divider sx={{ width: '90px', height: '3px', bgcolor: '#fa7702', margin: 'auto', marginBottom: '20px' }} />
             <Typography className="about" gutterBottom variant="body1">
               Outside of coding, you will often find me either traveling, 
-              lifting weights at the gym, exploring good foods in the city, or playing video games at home.
+              lifting weights at the gym, exploring good foods in Calgary, or playing video games at home.
             </Typography>
           </Box>
         </Box>

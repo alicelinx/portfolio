@@ -8,7 +8,7 @@ import '../index.css'
 interface StackItem {
   name: string;
   component: JSX.Element;
-};
+}
 
 const TechSkills = () => {
   return (
