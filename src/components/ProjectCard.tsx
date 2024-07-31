@@ -15,14 +15,14 @@ interface Project {
   name: string;
   imgUrl: string;
   techStacks: string[];
-  githubUrl: string;
+  githubUrl?: string;
   liveUrl?: string;
-};
+}
 
 interface ProjectCardProps {
   project: Project;
   mdScreen: boolean;
-};
+}
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, mdScreen }) => {
   return (
@@ -69,14 +69,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, mdScreen }) => {
           </Stack>
         </CardContent>
         <CardActions sx={{ display: 'flex', justifyContent: 'center', marginBottom: '10px' }}>
-          <Link href={project.githubUrl}>
-            <FaGithub size='22px' />
-          </Link>
-          {project.liveUrl && (
+          {project.githubUrl && 
+            <Link href={project.githubUrl}>
+              <FaGithub size='22px' />
+            </Link>
+          }
+          {project.liveUrl &&
             <Link href={project.liveUrl}>
               <FaLink size='22px' />
             </Link>
-          )}
+          }
         </CardActions>
       </Card>
     </Container>

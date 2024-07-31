@@ -1,5 +1,11 @@
 const projects = [
   {
+    name: 'LiitCare',
+    techStacks: ['React', 'Next.js', 'TypeScript'],
+    imgUrl: 'https://github.com/alicelinx/portfolio/blob/main/assets/liitcare.png?raw=true',
+    liveUrl: 'https://www.liitcare.dev/',
+  },
+  {
     name: 'Fitness Planner',
     techStacks: ['React', 'Node.js', 'PostgreSQL', 'ChatGPT API'],
     imgUrl: 'https://github.com/alicelinx/fitness-planner/assets/109875850/c593f5d0-e708-48eb-b923-2a4c71529304',

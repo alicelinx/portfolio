@@ -9,7 +9,7 @@ interface NavBarProps {
   darkMode: boolean;
   handleSectionClick: (section: string) => void;
   mdScreen: boolean;
-};
+}
 
 const NavBar: React.FC<NavBarProps> = ({ toggleDarkMode, darkMode, handleSectionClick, mdScreen }) => {  
   return (
