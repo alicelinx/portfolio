@@ -8,7 +8,7 @@ import '../index.css';
 
 interface ProjectCarouselProps {
   mdScreen: boolean;
-};
+}
 
 const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ mdScreen }) => {
   const settings = {

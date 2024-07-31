@@ -14,7 +14,7 @@ interface NavBarItemsProps {
   darkMode: boolean;
   handleSectionClick: (section: string) => void;
   mdScreen: boolean;
-};
+}
 
 const NavBarItems: React.FC<NavBarItemsProps> = ({
   sections,

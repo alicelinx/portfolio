@@ -6,7 +6,7 @@ import ProjectCarousel from "./ProjectCarousel";
 
 interface ProjectsProps {
   mdScreen: boolean;
-};
+}
 
 const Projects: React.FC<ProjectsProps> = ({ mdScreen }) => {
   return (

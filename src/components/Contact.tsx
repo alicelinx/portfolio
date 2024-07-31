@@ -1,10 +1,14 @@
 import { Box, Container, Divider, Link, Typography } from "@mui/material";
 import '../index.css';
-import { FaGithub, FaLink } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
-const Contact = () => {
+interface Props {
+  darkMode: boolean;
+}
+
+const Contact: React.FC<Props> = ({ darkMode }) => {
   return (
     <Box id="contact">
       <Container
@@ -36,7 +40,7 @@ const Contact = () => {
             sx={{
               display: 'flex',
               width: { xs: '100%', sm: '100%', md: '77%' },
-              marginTop: '1em',
+              marginTop: '2em',
               marginBottom: '3em',
               gap: 3,
               justifyContent: 'center'
@@ -52,8 +56,27 @@ const Contact = () => {
               <FaLinkedin />
             </Link>
           </Box>
-          <Typography className="contact" variant="h5" sx={{ fontFamily: 'Gill Sans' }}>Resume</Typography>
-          <Divider sx={{ width: '80px', height: '3px', bgcolor: '#fa7702', margin: 'auto', marginBottom: '30px' }} />
+          <Link href="https://flowcv.com/resume/233h8p8v6m">
+            <Typography 
+              component="button"
+              className="contact-2"
+              variant="h5"
+              sx={{
+                fontFamily: 'Gill Sans',
+                border: 'none',
+                bgcolor: '#fa7702',
+                color: darkMode ? "#FFF" : '#000',
+                cursor: 'pointer',
+                paddingX: '16px',
+                paddingY: '4px',
+                borderRadius: '38px',
+                '&:hover': {
+                  bgcolor: '#fe9f4b'
+                }
+              }}>
+                View My Resume
+              </Typography>
+          </Link>
           <Box 
             className="contact-2"
             sx={{
@@ -62,9 +85,6 @@ const Contact = () => {
               justifyContent: 'center',
             }}
           >
-            <Link href="https://flowcv.com/resume/233h8p8v6m">
-              <FaLink />
-            </Link>
           </Box>
         </Box>
       </Container>

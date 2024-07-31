@@ -52,10 +52,10 @@ function App() {
           handleSectionClick={handleSectionClick}
           mdScreen={mdScreen}
         />
-        {activeSection === 'intro' && <Intro />}
+        {activeSection === 'intro' && <Intro darkMode={darkMode} setActiveSection={setActiveSection} />}
         {activeSection === 'about' && <About />}
         {activeSection === 'projects' && <Projects mdScreen={mdScreen} />}
-        {activeSection === 'contact' && <Contact />}
+        {activeSection === 'contact' && <Contact darkMode={darkMode} />}
       </div>
     </IconContext.Provider>
   )
