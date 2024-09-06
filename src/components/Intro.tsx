@@ -41,7 +41,7 @@ const Intro: React.FC<Props> = ({ darkMode, setActiveSection }) => {
             className='brief-intro'
           >
             <Typography variant="h6">
-              I'm a full stack web developer with a passion for front end development.
+              I'm a passionate frontend developer.
             </Typography>
             <Typography variant="h6">
               I enjoy building modern web applications that are not only visually appealing 

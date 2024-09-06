@@ -51,16 +51,17 @@ const About = () => {
               I still remember the excitement of completing my first Twitter clone on CodePen. 
               What attracts me most about coding is its power - with just a few lines of code, 
               I can create beautiful applications and solve problems. <br /><br />
-              I have one year hands-on experience in creating responsive web applications using React, 
-              JavaScript, HTML, and CSS. I'm currently looking for my first role as a front end developer.
+              I have one year of hands-on experience creating responsive web applications using React, JavaScript/TypeScript, HTML, and CSS. 
+              I’m currently looking for new opportunities as a front-end developer. 
+              I’m open to onsite or hybrid work in Calgary, remote work across Canada, and would consider relocating for the perfect opportunity.
             </Typography>
             <Typography className="skills" variant="h5" sx={{ fontFamily: 'Gill Sans' }}>Soft Skills</Typography>
             <Divider sx={{ width: '100px', height: '3px', bgcolor: '#fa7702', margin: 'auto', marginBottom: '20px' }} />
             <Typography className="about" gutterBottom variant="body1" marginBottom={3}>
-              With my background in supply chain procurement and business operations, 
-              I have honed my soft skills in areas such as problem-solving, efficient time management, 
-              and effective teamwork and communication. I'm committed to delivering high-quality, 
-              user-friendly interfaces that meet clients' needs.
+            With a diverse background in business operations, international relations, and supply chain procurement, 
+            I bring a unique combination of strategic thinking and technical expertise. 
+            I've developed strong soft skills in problem-solving, time management, and effective teamwork and communication. 
+            I'm dedicated to creating high-quality, user-friendly interfaces that meet clients' needs and expectations.
             </Typography>
             <TechSkills />
             <Typography className="skills" variant="h5" sx={{ fontFamily: 'Gill Sans' }}>Interests</Typography>

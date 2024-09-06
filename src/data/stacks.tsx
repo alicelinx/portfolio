@@ -21,6 +21,9 @@ import { SiTailwindcss } from "react-icons/si";
 import { SiJira } from "react-icons/si";
 import { SiNextdotjs } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa";
+import { SiPrisma } from "react-icons/si";
+import { FaDocker } from "react-icons/fa";
+
 
 export const frontEndStacks = [
   {
@@ -82,6 +85,10 @@ export const backEndStacks = [
     name: 'next.js',
     component: <SiNextdotjs className="stack-icon" />,
   },
+  {
+    name: 'prisma',
+    component: <SiPrisma className="stack-icon" />
+  }
 ];
 
 export const otherStacks = [
@@ -116,5 +123,9 @@ export const otherStacks = [
   {
     name: 'jira',
     component: <SiJira className="stack-icon" />
+  },
+  {
+    name: 'docker',
+    component: <FaDocker className="stack-icon" />
   },
 ];
